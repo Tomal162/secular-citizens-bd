@@ -1,0 +1,21 @@
+
+.text-white{
+    font-weight: 400;
+    font-style: normal;
+}
+
+.modal {
+    display: none;
+}
+.modal-active {
+    display: block;
+}
+
+.swiper-slide {
+    height: 200px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.member-slide {
+    margin-bottom: 20px; /* Optional: Adds spacing between slides */
+}
