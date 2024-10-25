@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secular Citizens BD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    .fade-out {
+            animation: fade-out 0.5s ease-out forwards;
+        }
+
+        .fade-in {
+            animation: fade-in 0.5s ease-in forwards;
+        }
+
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-t from-neutral-500 to-stone-900 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <a href="#" class="text-white font-bold text-2xl"><span class="font-serif text-white">SECULAR CITIZENS</span><br><span class="font-serif text-white">BANGLADESH</span><br><span class="text-sm font-light">Be secular, Be free...</span></a>
+            </div>
+            <div>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="text-lg text-white hover:text-black transition-colors duration-300 ease-in-out">Home</a></li>
+                    <li><a href="Gettoknow.html" class="text-lg text-white hover:text-black transition-colors duration-300 ease-in-out">Get to know us</a></li>
+                    <li><a href="resource.html" class="text-lg text-white hover:text-black transition-colors duration-300 ease-in-out">Resource Hub</a></li>
+                    <li><a href="events.html" class="text-lg text-white hover:text-black transition-colors duration-300 ease-in-out">Events</a></li>
+                    <li><a href="discourse.html" class="text-lg text-white hover:text-black transition-colors duration-300 ease-in-out">Discourse</a></li>
+                    <li><a href="reachout.html" class="text-lg text-white hover:text-black transition-colors duration-300 ease-in-out">Reach Out</a></li>
+                    <li><a href="login.html" class="text-lg text-white hover:text-black  transition-colors duration-300 ease-in-out">Login</a></li>
+                    <li><a href="register.html" class="text-lg text-white hover:text-black  transition-colors duration-300 ease-in-out">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-stone-900 text-white py-2">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Contact Number -->
+            <div>
+                <span class="mr-4">Hotline: +880 1788 XXX XXX</span>
+            </div>
+            <!-- Social Media Links -->
+            <div>
+                <a href="#" class="text-white mr-4 hover:text-neutral-500 transition-colors duration-300 ease-in-out">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="text-white mr-4 hover:text-neutral-500 transition-colors duration-300 ease-in-out">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-white mr-4 hover:text-neutral-500 transition-colors duration-300 ease-in-out">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-white mr-4 hover:text-neutral-500 transition-colors duration-300 ease-in-out">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Discourse Section -->
+<section class="mt-12 container mx-auto" id="discourse">
+    <h2 class="text-4xl font-bold text-center mb-8 font-zendots">Discourse</h2>
+    <div class="items-center flex" id="article-container">
+        <!-- Article Box Template -->
+        <div class="bg-neutral-500 shadow-md rounded p-4 items-center">
+            <img src="img/1_NjuXSOrglWvd2Qlyk4du3Q.jpg" alt="Article Image" class="w-1/3 h-40 object-cover rounded">
+            <div class="ml-4">
+                <h3 class="text-black text-xl font-bold mb-2">Article Headline</h3>
+                <p class="text-black mb-1">By: <span class="font-semibold">Writer Name</span></p>
+                <p class="text-black mb-4">Date: <span class="font-semibold">Date</span></p>
+                <p class="text-black mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, iusto. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, fuga...</p>
+                <button class="text-white hover:underline">read more...</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <button class="px-4 py-2 bg-black text-white rounded hover:bg-neutral-500 mb-10" onclick="loadMoreArticles()">Load More</button>
+    </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="bg-stone-950 text-white py-4">
+    <div class="container mx-auto text-center">
+        &copy; 2024 Secular Citizens Bangladesh. All Rights Reserved.
+    </div>
+</footer>
+<script>
+    let currentIndex = 0;
+    const articlesPerPage = 4;
+
+    const articles = [
+        {
+            headline: "Article Headline 1",
+            image: "img/1_NjuXSOrglWvd2Qlyk4du3Q.jpg",
+            writer: "Writer Name 1",
+            date: "Date 1",
+            summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, iusto. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, fuga...",
+            link: "details1.html"
+        },
+        {
+            headline: "Article Headline 2",
+            image: "img/1_NjuXSOrglWvd2Qlyk4du3Q.jpg",
+            writer: "Writer Name 2",
+            date: "Date 2",
+            summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, iusto. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, fuga...",
+            link: "details2.html"
+        },
+        {
+            headline: "Article Headline 3",
+            image: "img/1_NjuXSOrglWvd2Qlyk4du3Q.jpg",
+            writer: "Writer Name 3",
+            date: "Date 3",
+            summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, iusto. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, fuga...",
+            link: "details3.html"
+        },
+        {
+            headline: "Article Headline 4",
+            image: "img/1_NjuXSOrglWvd2Qlyk4du3Q.jpg",
+            writer: "Writer Name 4",
+            date: "Date 4",
+            summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, iusto. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, fuga...",
+            link: "details4.html"
+        },
+        {
+            headline: "Article Headline 5",
+            image: "img/1_NjuXSOrglWvd2Qlyk4du3Q.jpg",
+            writer: "Writer Name 5",
+            date: "Date 5",
+            summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, iusto. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, fuga...",
+            link: "details5.html"
+        },
+        {
+            headline: "Article Headline 6",
+            image: "img/1_NjuXSOrglWvd2Qlyk4du3Q.jpg",
+            writer: "Writer Name 6",
+            date: "Date 6",
+            summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, iusto. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, fuga...",
+            link: "details6.html"
+        },
+        {
+            headline: "Article Headline 7",
+            image: "img/1_NjuXSOrglWvd2Qlyk4du3Q.jpg",
+            writer: "Writer Name 7",
+            date: "Date 7",
+            summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, iusto. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, fuga...",
+            link: "details7.html"
+        },
+        {
+            headline: "Article Headline 8",
+            image: "img/1_NjuXSOrglWvd2Qlyk4du3Q.jpg",
+            writer: "Writer Name 8",
+            date: "Date 8",
+            summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, iusto. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, fuga...",
+            link: "details8.html"
+        },
+        // Add more articles as needed
+    ];
+
+    
+
+    function loadMoreArticles() {
+        const articleContainer = document.getElementById('article-container');
+
+        // Apply fade-out effect to existing articles
+        Array.from(articleContainer.children).forEach(child => {
+            child.classList.add('fade-out');
+        });
+
+        setTimeout(() => {
+            // Clear existing articles
+            articleContainer.innerHTML = '';
+
+            // Load new articles
+            for (let i = 0; i < articlesPerPage; i++) {
+                const articleIndex = (currentIndex + i) % articles.length;
+                const article = articles[articleIndex];
+
+                const articleBox = document.createElement('div');
+                articleBox.className = 'w-full md:w-1/2 px-4 mb-8 fade-in';
+                articleBox.innerHTML = `
+                    <div class="bg-neutral-500 shadow-md rounded p-4 flex flex-col items-center text-center">
+                        <img src="${article.image}" alt="Article Image" class="h-40 object-cover rounded mb-4">
+                        <h3 class="text-black text-xl font-bold mb-2">${article.headline}</h3>
+                        <p class="text-black mb-1">By: <span class="font-semibold">${article.writer}</span></p>
+                        <p class="text-black mb-4">Date: <span class="font-semibold">${article.date}</span></p>
+                        <p class="text-black mb-4">${article.summary}</p>
+                        <a href="${article.link}" target="_blank" class="text-white hover:underline mb-2">read more...</a>
+                    </div>
+                `;
+                articleContainer.appendChild(articleBox);
+            }
+
+            // Update current index for the next set of articles
+            currentIndex = (currentIndex + articlesPerPage) % articles.length;
+        }, 500); // Match the timeout duration with the fade-out animation duration
+    }
+
+    // Initial load of articles
+    loadMoreArticles();
+</script>
+
+
+
+</body>
+</html>
